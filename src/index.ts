@@ -13,29 +13,171 @@ WA.room.onEnterZone('clock', () => {
     currentPopup =  WA.ui.openPopup("clockPopup","It's " + time,[]);
 })
 
-WA.room.onEnterZone('Tami', () => {
-    currentPopup =  WA.ui.openPopup("Tami","Hier sitzt Tamara. Sie ist zuständig für unser Marketing. Let's get in touch?",[
-    {
-     'label': "LinkedIn",
-     'className': "primary",
-     callback: (popup) => {
-     	       WA.nav.openTab('https://www.linkedin.com/in/tamara-katja-frast-7709a71ab/');
-	       }
+let linkedIn = [
+    {'zoneName':'Tami', 'name': 'Tamara', 'url': 'https://www.linkedin.com/in/tamara-katja-frast-7709a71ab/'},
+    {'zoneName':'Gerold', 'name': 'Gerold', 'url': 'https://www.linkedin.com/in/gerold-böhler-054437170/'},
+    {'zoneName':'Matthias', 'name': 'Matthias', 'url': 'https://www.linkedin.com/in/matthias-frick-96775110a/'},
+    {'zoneName':'Herbert', 'name': 'Herbert', 'url': 'https://www.linkedin.com/in/herbert-scheffknecht-7a905b32/'},
+    {'zoneName':'Christoph', 'name': 'Christoph', 'url': ''},
+    {'zoneName':'Florian', 'name': 'Florian', 'url': 'https://www.linkedin.com/in/florian-voelker/'},
+];
+
+WA.room.onEnterZone(linkedIn[0].zoneName, () => {
+	currentPopup =  WA.ui.openPopup('Office1', "Hier sitzt "+linkedIn[0].name+". Sie ist zuständig für unser Marketing. Let's get in touch?",[
+	    {
+		'label': "LinkedIn",
+		'className': "primary",
+		callback: (popup) => {
+     		WA.nav.openTab(linkedIn[0].url);
+	    }
     },
     {
     label: "Schließen",
-        className: "normal",
-        callback: (popup) => {
-            // Close the popup when the "Close" button is pressed.
-            popup.close();
-	    
-	}
+    className: "normal",
+    callback: (popup) => {
+        // Close the popup when the "Close" button is pressed.
+        popup.close();
+      }
+     }
+   ]);
+})
+
+WA.room.onLeaveZone(linkedIn[0].zoneName, () => {closePopUp();})
+WA.room.onLeaveZone(linkedIn[1].zoneName, () => {closePopUp();})
+WA.room.onLeaveZone(linkedIn[2].zoneName, () => {closePopUp();})
+WA.room.onLeaveZone(linkedIn[3].zoneName, () => {closePopUp();})
+WA.room.onLeaveZone(linkedIn[4].zoneName, () => {closePopUp();})
+WA.room.onLeaveZone(linkedIn[5].zoneName, () => {closePopUp();})
+
+WA.room.onEnterZone(linkedIn[1].zoneName, () => {
+    currentPopup =  WA.ui.openPopup('Office1', "Hier sitzt "+linkedIn[1].name+". Let's get in touch?",[
+	{
+		'label': "LinkedIn",
+		'className': "primary",
+		callback: (popup) => {
+     		WA.nav.openTab(linkedIn[1].url);
+	    }
+    },
+    {
+    label: "Schließen",
+    className: "normal",
+    callback: (popup) => {
+        // Close the popup when the "Close" button is pressed.
+        popup.close();
+      }
+     }
+   ]);
+})
+
+// Number Matthias
+WA.room.onEnterZone(linkedIn[2].zoneName, () => {
+	currentPopup =  WA.ui.openPopup('Office2', "Hier sitzt "+linkedIn[2].name+". Let's get in touch?",[
+	    {
+		'label': "LinkedIn",
+		'className': "primary",
+		callback: (popup) => {
+     		WA.nav.openTab(linkedIn[2].url);
+	    }
+    },
+    {
+    label: "Schließen",
+    className: "normal",
+    callback: (popup) => {
+        // Close the popup when the "Close" button is pressed.
+        popup.close();
+      }
+     }
+   ]);
+})
+
+// Number Herbert
+WA.room.onEnterZone(linkedIn[3].zoneName, () => {
+	currentPopup =  WA.ui.openPopup('Office2', "Hier sitzt "+linkedIn[3].name+". Let's get in touch?",[
+	    {
+		'label': "LinkedIn",
+		'className': "primary",
+		callback: (popup) => {
+     		WA.nav.openTab(linkedIn[3].url);
+	    }
+    },
+    {
+    label: "Schließen",
+    className: "normal",
+    callback: (popup) => {
+        // Close the popup when the "Close" button is pressed.
+        popup.close();
+      }
+     }
+   ]);
+})
+
+// Number Christoph
+WA.room.onEnterZone(linkedIn[4].zoneName, () => {
+	currentPopup =  WA.ui.openPopup('Office2', "Hier sitzt "+linkedIn[4].name+". Let's get in touch?",[
+	    {
+		'label': "LinkedIn",
+		'className': "primary",
+		callback: (popup) => {
+     		WA.nav.openTab(linkedIn[4].url);
+	    }
+    },
+    {
+    label: "Schließen",
+    className: "normal",
+    callback: (popup) => {
+        // Close the popup when the "Close" button is pressed.
+        popup.close();
+      }
+     }
+   ]);
+})
+
+// Number Florian
+WA.room.onEnterZone(linkedIn[5].zoneName, () => {
+	currentPopup =  WA.ui.openPopup('Office3', "Hier sitzt "+linkedIn[5].name+". Let's get in touch?",[
+	    {
+		'label': "LinkedIn",
+		'className': "primary",
+		callback: (popup) => {
+     		WA.nav.openTab(linkedIn[5].url);
+	    }
+    },
+    {
+    label: "Schließen",
+    className: "normal",
+    callback: (popup) => {
+        // Close the popup when the "Close" button is pressed.
+        popup.close();
+      }
      }
    ]);
 })
 
 
-WA.room.onLeaveZone('clock', closePopUp)
+// HomePage Popup
+WA.room.onEnterZone('Antiloop_Homepage', () => {
+	currentPopup =  WA.ui.openPopup('Homepage', "Neugierig? Besuch unsere Homepage",[
+	    {
+		'label': "Homepage",
+		'className': "primary",
+		callback: (popup) => {
+     		WA.nav.openTab('https://antiloop.com');
+	    }
+    },
+    {
+    label: "Schließen",
+    className: "normal",
+    callback: (popup) => {
+        // Close the popup when the "Close" button is pressed.
+        popup.close();
+      }
+     }
+   ]);
+})
+
+WA.room.onLeaveZone('Antiloop_Homepage', closePopUp);
+
+WA.room.onLeaveZone('clock', closePopUp);
 
 function closePopUp(){
     if (currentPopup !== undefined) {
