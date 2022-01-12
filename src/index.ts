@@ -13,6 +13,28 @@ WA.room.onEnterZone('clock', () => {
     currentPopup =  WA.ui.openPopup("clockPopup","It's " + time,[]);
 })
 
+WA.room.onEnterZone('Tami', () => {
+    currentPopup =  WA.ui.openPopup("Tami","Hier sitzt Tamara. Sie ist zuständig für unser Marketing. Let's get in touch?",[
+    {
+     'label': "LinkedIn",
+     'className': "primary",
+     callback: (popup) => {
+     	       WA.nav.openTab('https://www.linkedin.com/in/tamara-katja-frast-7709a71ab/');
+	       }
+    },
+    {
+    label: "Schließen",
+        className: "normal",
+        callback: (popup) => {
+            // Close the popup when the "Close" button is pressed.
+            popup.close();
+	    
+	}
+     }
+   ]);
+})
+
+
 WA.room.onLeaveZone('clock', closePopUp)
 
 function closePopUp(){
