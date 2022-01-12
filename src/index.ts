@@ -177,6 +177,30 @@ WA.room.onEnterZone('Antiloop_Homepage', () => {
 
 WA.room.onLeaveZone('Antiloop_Homepage', closePopUp);
 
+//Football
+// HomePage Popup
+WA.room.onEnterZone('Football', () => {
+    currentPopup =  WA.ui.openPopup('Football', "Komm doch mal auf ein Tischkicker-Match vorbei. Antiloop-CEO Matthias ist leidenschaftlicher Fußballer und freut sich auf einen Kennenlernen mit Dir!",[
+	{
+	    'label': "Gleich Termin ausmachen",
+	    'className': "primary",
+	    callback: (popup) => {
+     		WA.nav.openTab('https://calendly.com/antiloop-matthias-frick');
+	    }
+    },
+    {
+    label: "Schließen",
+    className: "normal",
+    callback: (popup) => {
+        // Close the popup when the "Close" button is pressed.
+        popup.close();
+      }
+     }
+   ]);
+})
+
+WA.room.onLeaveZone('Football', closePopUp);
+
 WA.room.onLeaveZone('clock', closePopUp);
 
 function closePopUp(){
