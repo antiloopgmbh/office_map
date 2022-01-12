@@ -20,6 +20,7 @@ WA.room.onEnterZone('Tami', () => {
      'className': "primary",
      callback: (popup) => {
      	       WA.nav.openTab('https://www.linkedin.com/in/tamara-katja-frast-7709a71ab/');
+	       }
     },
     {
     label: "Schließen",
@@ -27,8 +28,9 @@ WA.room.onEnterZone('Tami', () => {
         callback: (popup) => {
             // Close the popup when the "Close" button is pressed.
             popup.close();
-        }
+	    
 	}
+     }
    ]);
 })
 
