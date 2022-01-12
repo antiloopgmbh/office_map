@@ -6,12 +6,6 @@ import {bootstrapExtra} from "@workadventure/scripting-api-extra";
 bootstrapExtra().catch(e => console.error(e));
 
 let currentPopup: any = undefined;
-const today = new Date();
-const time = today.getHours() + ":" + today.getMinutes();
-
-WA.room.onEnterZone('clock', () => {
-    currentPopup =  WA.ui.openPopup("clockPopup","It's " + time,[]);
-})
 
 let linkedIn = [
     {'zoneName':'Tami', 'name': 'Tamara', 'url': 'https://www.linkedin.com/in/tamara-katja-frast-7709a71ab/'},
@@ -67,7 +61,7 @@ WA.room.onEnterZone(linkedIn[1].zoneName, () => {
       }
      }
    ]);
-})
+});
 
 // Number Matthias
 WA.room.onEnterZone(linkedIn[2].zoneName, () => {
@@ -88,7 +82,7 @@ WA.room.onEnterZone(linkedIn[2].zoneName, () => {
       }
      }
    ]);
-})
+});
 
 // Number Herbert
 WA.room.onEnterZone(linkedIn[3].zoneName, () => {
@@ -109,7 +103,7 @@ WA.room.onEnterZone(linkedIn[3].zoneName, () => {
       }
      }
    ]);
-})
+});
 
 // Number Christoph
 WA.room.onEnterZone(linkedIn[4].zoneName, () => {
@@ -151,7 +145,7 @@ WA.room.onEnterZone(linkedIn[5].zoneName, () => {
       }
      }
    ]);
-})
+});
 
 
 // HomePage Popup
@@ -173,7 +167,7 @@ WA.room.onEnterZone('Antiloop_Homepage', () => {
       }
      }
    ]);
-})
+});
 
 WA.room.onLeaveZone('Antiloop_Homepage', closePopUp);
 
@@ -197,9 +191,57 @@ WA.room.onEnterZone('Football', () => {
       }
      }
    ]);
-})
+});
 
 WA.room.onLeaveZone('Football', closePopUp);
+
+//Football
+// HomePage Popup
+
+WA.room.onEnterZone('Hoody', () => {
+    currentPopup =  WA.ui.openPopup('Hoody', "Ein Notebook zieht Dich einfach an? Dann passt unser cooler Antiloop-Hoodie perfekt zu Dir! Schreib uns Deinen Namen, Deine Größe und Deine Post-Anschrift. Oder noch besser: Besuche uns doch im Büro, wir freuen uns auf Deinen Anruf vorab!",[
+	{
+	    'label': "Gleich schreiben",
+	    'className': "primary",
+	    callback: (popup) => {
+     		WA.nav.openTab('mailto:office@antiloop.com');
+	    }
+    },
+    {
+    label: "Verzichten!",
+    className: "normal",
+    callback: (popup) => {
+        // Close the popup when the "Close" button is pressed.
+        popup.close();
+      }
+     }
+   ]);
+});
+
+WA.room.onLeaveZone('Hoody', closePopUp);
+
+
+WA.room.onEnterZone('beerFridge', () => {
+    currentPopup =  WA.ui.openPopup('beerFridge', "Lust unseren CEO bei einem entspannten Bier kennen zu lernen?",[
+	{
+	    'label': "Bierzeit buchen",
+	    'className': "primary",
+	    callback: (popup) => {
+     		WA.nav.openTab('https://calendly.com/antiloop-gerold-boehler');
+	    }
+    },
+    {
+    label: "Später",
+    className: "normal",
+    callback: (popup) => {
+        // Close the popup when the "Close" button is pressed.
+        popup.close();
+      }
+     }
+   ]);
+});
+
+WA.room.onLeaveZone('beerFridge', closePopUp);
 
 WA.room.onLeaveZone('clock', closePopUp);
 
