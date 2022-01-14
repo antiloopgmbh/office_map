@@ -235,7 +235,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":".\/server_room.json#entry-from-office"
+                 "value":"https:\/\/florian25686.github.io\/office_map\/server_room.json#entry-from-office"
                 }],
          "type":"tilelayer",
          "visible":true,
