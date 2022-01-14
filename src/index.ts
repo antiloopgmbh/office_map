@@ -8,7 +8,7 @@ bootstrapExtra().catch(e => console.error(e));
 let currentPopup: any = undefined;
 
 let linkedIn = [
-    {'zoneName':'Tami', 'name': 'Tamara', 'url': 'https://www.linkedin.com/in/tamara-katja-frast-7709a71ab/'},
+    {'zoneName':'Tami', 'name': 'Tamara', 'url': 'https://www.linkedin.com/in/tamara-katja-frast/'},
     {'zoneName':'Gerold', 'name': 'Gerold', 'url': 'https://www.linkedin.com/in/gerold-böhler-054437170/'},
     {'zoneName':'Matthias', 'name': 'Matthias', 'url': 'https://www.linkedin.com/in/matthias-frick-96775110a/'},
     {'zoneName':'Herbert', 'name': 'Herbert', 'url': 'https://www.linkedin.com/in/herbert-scheffknecht-7a905b32/'},
@@ -204,11 +204,11 @@ WA.room.onEnterZone('Hoody', () => {
 	    'label': "Gleich schreiben",
 	    'className': "primary",
 	    callback: (popup) => {
-     		WA.nav.openTab('mailto:office@antiloop.com');
+     		WA.nav.openTab('mailto:office@antiloop.com?subject=Hoodie!&body=Name:  Größe:   Post-Adresse:  ');
 	    }
     },
     {
-    label: "Verzichten!",
+    label: "Schließen",
     className: "normal",
     callback: (popup) => {
         // Close the popup when the "Close" button is pressed.
@@ -222,7 +222,7 @@ WA.room.onLeaveZone('Hoody', closePopUp);
 
 
 WA.room.onEnterZone('beerFridge', () => {
-    currentPopup =  WA.ui.openPopup('beerFridge', "Lust unseren CEO bei einem entspannten Bier kennen zu lernen?",[
+    currentPopup =  WA.ui.openPopup('beerFridge', "Bei uns herrscht OpenDoor-Policy, auch beim Bierkühlschrank",[
 	{
 	    'label': "Bierzeit buchen",
 	    'className': "primary",
@@ -243,7 +243,62 @@ WA.room.onEnterZone('beerFridge', () => {
 
 WA.room.onLeaveZone('beerFridge', closePopUp);
 
-WA.room.onLeaveZone('clock', closePopUp);
+// Social Media things
+WA.room.onEnterZone('social_LinkedIn', () => {
+    currentPopup =  WA.ui.openPopup('FollowUs', "",[
+	{
+	    'label': "LinkedIn",
+	    'className': "primary",
+	    callback: (popup) => {
+     		WA.nav.openTab('https://www.linkedin.com/company/antiloopgmbh/');
+	    }
+    }
+   ]);
+});
+
+WA.room.onLeaveZone('social_LinkedIn', closePopUp);
+
+WA.room.onEnterZone('social_Instagram', () => {
+    currentPopup =  WA.ui.openPopup('FollowUs', "",[
+	{
+	    'label': "Instagram",
+	    'className': "primary",
+	    callback: (popup) => {
+     		WA.nav.openTab('https://www.instagram.com/antiloopgmbh/');
+	    }
+    }
+   ]);
+});
+
+WA.room.onLeaveZone('social_Instagram', closePopUp);
+
+WA.room.onEnterZone('social_Facebook', () => {
+    currentPopup =  WA.ui.openPopup('FollowUs', "",[
+	{
+	    'label': "Facebook",
+	    'className': "primary",
+	    callback: (popup) => {
+     		WA.nav.openTab('https://www.facebook.com/antiloopgmbh');
+	    }
+    }
+   ]);
+});
+
+WA.room.onLeaveZone('social_Facebook', closePopUp);
+
+WA.room.onEnterZone('social_Twitter', () => {
+    currentPopup =  WA.ui.openPopup('FollowUs', "",[
+	{
+	    'label': "Twitter",
+	    'className': "primary",
+	    callback: (popup) => {
+     		WA.nav.openTab('https://twitter.com/antiloopgmbh');
+	    }
+    }
+   ]);
+});
+
+WA.room.onLeaveZone('social_Twitter', closePopUp);
 
 function closePopUp(){
     if (currentPopup !== undefined) {
