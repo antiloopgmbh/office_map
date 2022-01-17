@@ -17,7 +17,7 @@ let linkedIn = [
 ];
 
 WA.room.onEnterZone(linkedIn[0].zoneName, () => {
-	currentPopup =  WA.ui.openPopup('Office1', "Hier sitzt "+linkedIn[0].name+". Sie ist zuständig für unser Marketing. Let's get in touch?",[
+	currentPopup =  WA.ui.openPopup('Office1', "Hier sitzt "+linkedIn[0].name+". Let's get in touch?",[
 	    {
 		'label': "LinkedIn",
 		'className': "primary",
@@ -299,6 +299,39 @@ WA.room.onEnterZone('social_Twitter', () => {
 });
 
 WA.room.onLeaveZone('social_Twitter', closePopUp);
+
+WA.room.onEnterZone('social_Twitter', () => {
+    currentPopup =  WA.ui.openPopup('FollowUs', "",[
+        {
+            'label': "Twitter",
+            'className': "primary",
+            callback: (popup) => {
+                WA.nav.openTab('https://twitter.com/antiloopgmbh');
+            }
+        }
+    ]);
+});
+
+WA.room.onLeaveZone('social_Twitter', closePopUp);
+
+
+WA.room.onEnterZone('Antiloop_welcome', () => {
+    currentPopup =  WA.ui.openPopup('Antiloop_welcome', "Willkommen im Antiloop Büro, eine interaktive Möglichkeit einen Eindruck unseres Büros zu bekommen." +
+        "\n\n- Diese Welt funktioniert am Besten in Chrome" +
+        "\n\n- Steuerung mit WASD oder Pfeiltasten" +
+        "\n\n- Um mit anderen in Kontakt zu treten einfach näher heranlaufen bis ein Kreis erscheint um einen Videochat zu starten" +
+        "\n\nViel Spaß im Büro, vielleicht triffst du den ein oder anderen Mitarbeiter oder findest unser Gewinnspiel",[
+        {
+            'label': "Verstanden",
+            'className': "primary",
+            callback: (popup) => {
+                popup.close();
+            }
+        }
+    ]);
+});
+
+WA.room.onLeaveZone('Antiloop_welcome', closePopUp);
 
 function closePopUp(){
     if (currentPopup !== undefined) {
