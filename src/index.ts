@@ -316,11 +316,14 @@ WA.room.onLeaveZone('social_Twitter', closePopUp);
 
 
 WA.room.onEnterZone('Antiloop_welcome', () => {
-    currentPopup =  WA.ui.openPopup('Antiloop_welcome', "Willkommen im Antiloop Büro, eine interaktive Möglichkeit einen Eindruck unseres Büros zu bekommen." +
-        "\n\n- Diese Welt funktioniert am Besten in Chrome" +
-        "\n\n- Steuerung mit WASD oder Pfeiltasten" +
-        "\n\n- Um mit anderen in Kontakt zu treten einfach näher heranlaufen bis ein Kreis erscheint um einen Videochat zu starten" +
-        "\n\nViel Spaß im Büro, vielleicht triffst du den ein oder anderen Mitarbeiter oder findest unser Gewinnspiel",[
+    currentPopup =  WA.ui.openPopup('Antiloop_welcome', "Willkommen bei Antiloop!"
+        + "\n\nIn unserem interaktiven Büro bekommst Du einen ersten Eindruck von uns - wie Du siehst, lieben wir unseren Job : -)"
+    + "\n\nGut zu wissen:"
+    + "\n\n- Bevorzugter Browser: Chrome"
+    + "\n\n- Steuerung mit WASD oder Pfeiltasten"
+    + "\n\n- Um einen Videochat zu führen, laufe mit Deiner Spielfigur zu einem Kollegen von uns. Sobald ein Kreis erscheint, kannst Du loslegen."
+    + "\n\n- Es gibt ein Gewinnspiel, findest Du es?"
+    + "\n\nViel Spaß!",[
         {
             'label': "Verstanden",
             'className': "primary",
