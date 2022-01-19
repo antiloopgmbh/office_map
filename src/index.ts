@@ -280,21 +280,6 @@ WA.room.onEnterZone('social_Twitter', () => {
 
 WA.room.onLeaveZone('social_Twitter', closePopUp);
 
-WA.room.onEnterZone('social_Twitter', () => {
-    currentPopup =  WA.ui.openPopup('FollowUs', "",[
-        {
-            'label': "Twitter",
-            'className': "primary",
-            callback: (popup) => {
-                WA.nav.openTab('https://twitter.com/antiloopgmbh');
-            }
-        }
-    ]);
-});
-
-WA.room.onLeaveZone('social_Twitter', closePopUp);
-
-
 WA.room.onEnterZone('Antiloop_welcome', () => {
     currentPopup =  WA.ui.openPopup('Antiloop_welcome', "Willkommen bei Antiloop!"
         + "\n\nIn unserem interaktiven Büro bekommst Du einen ersten Eindruck von uns - wie Du siehst, lieben wir unseren Job : -)"
