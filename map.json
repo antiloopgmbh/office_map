@@ -314,7 +314,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"https:\/\/play.workadventu.re\/@\/antiloop\/fhjobmesse\/antiloopofficeg\u00f6tzis#entry-from-office"
+                 "value":"server_room.json#entry-from-office"
                 }],
          "type":"tilelayer",
          "visible":true,
