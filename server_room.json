@@ -72,7 +72,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"map.json#entry-from-server"
+                 "value":"https:\/\/play.workadventu.re\/@\/antiloop\/fhjobmesse\/office#entry-from-server"
                 }],
          "type":"tilelayer",
          "visible":true,
