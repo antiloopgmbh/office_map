@@ -2,7 +2,6 @@
 
 import {bootstrapExtra} from "@workadventure/scripting-api-extra";
 
-// The line below bootstraps the Scripting API Extra library that adds a number of advanced properties/features to WorkAdventure.
 bootstrapExtra().catch(e => console.error(e));
 
 let currentPopup: any = undefined;
@@ -29,7 +28,6 @@ WA.room.onEnterZone(linkedIn[0].zoneName, () => {
     label: "Schließen",
     className: "normal",
     callback: (popup) => {
-        // Close the popup when the "Close" button is pressed.
         popup.close();
       }
      }
@@ -56,14 +54,12 @@ WA.room.onEnterZone(linkedIn[1].zoneName, () => {
     label: "Schließen",
     className: "normal",
     callback: (popup) => {
-        // Close the popup when the "Close" button is pressed.
         popup.close();
       }
      }
    ]);
 });
 
-// Number Matthias
 WA.room.onEnterZone(linkedIn[2].zoneName, () => {
 	currentPopup =  WA.ui.openPopup('Office2', "Hier sitzt "+linkedIn[2].name+". Let's get in touch?",[
 	    {
@@ -77,14 +73,12 @@ WA.room.onEnterZone(linkedIn[2].zoneName, () => {
     label: "Schließen",
     className: "normal",
     callback: (popup) => {
-        // Close the popup when the "Close" button is pressed.
         popup.close();
       }
      }
    ]);
 });
 
-// Number Herbert
 WA.room.onEnterZone(linkedIn[3].zoneName, () => {
 	currentPopup =  WA.ui.openPopup('Office2', "Hier sitzt "+linkedIn[3].name+". Let's get in touch?",[
 	    {
@@ -98,14 +92,12 @@ WA.room.onEnterZone(linkedIn[3].zoneName, () => {
     label: "Schließen",
     className: "normal",
     callback: (popup) => {
-        // Close the popup when the "Close" button is pressed.
         popup.close();
       }
      }
    ]);
 });
 
-// Number Christoph
 WA.room.onEnterZone(linkedIn[4].zoneName, () => {
 	currentPopup =  WA.ui.openPopup('Office2', "Hier sitzt "+linkedIn[4].name+". Let's get in touch?",[
 	    {
@@ -119,14 +111,12 @@ WA.room.onEnterZone(linkedIn[4].zoneName, () => {
     label: "Schließen",
     className: "normal",
     callback: (popup) => {
-        // Close the popup when the "Close" button is pressed.
         popup.close();
       }
      }
    ]);
 })
 
-// Number Florian
 WA.room.onEnterZone(linkedIn[5].zoneName, () => {
 	currentPopup =  WA.ui.openPopup('Office3', "Hier sitzt "+linkedIn[5].name+". Let's get in touch?",[
 	    {
@@ -140,15 +130,12 @@ WA.room.onEnterZone(linkedIn[5].zoneName, () => {
     label: "Schließen",
     className: "normal",
     callback: (popup) => {
-        // Close the popup when the "Close" button is pressed.
         popup.close();
       }
      }
    ]);
 });
 
-
-// HomePage Popup
 WA.room.onEnterZone('Antiloop_Homepage', () => {
 	currentPopup =  WA.ui.openPopup('Homepage', "Neugierig? Besuch unsere Homepage",[
 	    {
@@ -162,7 +149,6 @@ WA.room.onEnterZone('Antiloop_Homepage', () => {
     label: "Schließen",
     className: "normal",
     callback: (popup) => {
-        // Close the popup when the "Close" button is pressed.
         popup.close();
       }
      }
@@ -186,7 +172,6 @@ WA.room.onEnterZone('Football', () => {
     label: "Schließen",
     className: "normal",
     callback: (popup) => {
-        // Close the popup when the "Close" button is pressed.
         popup.close();
       }
      }
@@ -194,9 +179,6 @@ WA.room.onEnterZone('Football', () => {
 });
 
 WA.room.onLeaveZone('Football', closePopUp);
-
-//Football
-// HomePage Popup
 
 WA.room.onEnterZone('Hoody', () => {
     currentPopup =  WA.ui.openPopup('Hoody', "Ein Notebook zieht Dich einfach an? Dann passt unser cooler Antiloop-Hoodie perfekt zu Dir! Schreib uns Deinen Namen, Deine Größe und Deine Post-Anschrift. Oder noch besser: Besuche uns doch im Büro, wir freuen uns auf Deinen Anruf vorab!",[
@@ -211,7 +193,6 @@ WA.room.onEnterZone('Hoody', () => {
     label: "Schließen",
     className: "normal",
     callback: (popup) => {
-        // Close the popup when the "Close" button is pressed.
         popup.close();
       }
      }
@@ -234,7 +215,6 @@ WA.room.onEnterZone('beerFridge', () => {
     label: "Später",
     className: "normal",
     callback: (popup) => {
-        // Close the popup when the "Close" button is pressed.
         popup.close();
       }
      }
