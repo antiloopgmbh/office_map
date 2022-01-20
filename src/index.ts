@@ -301,6 +301,38 @@ WA.room.onEnterZone('Antiloop_welcome', () => {
 
 WA.room.onLeaveZone('Antiloop_welcome', closePopUp);
 
+WA.room.onEnterZone('TalkSchedule', () => {
+    currentPopup =  WA.ui.openPopup('Talks', "Timeline: Antiloop-Newsroom"
+        + "\n\n09:00 - 09:30 Uhr"
+	+ "\nOffene Fragerunde, Antiloop als Arbeitgeber"
+	+ "\n\n10:00 - 10:30 Uhr"
+        + "\nTechnologie-Überblick: Mit welchen Lösungen arbeitet Antiloop"
+	+ "\n\n10:30 - 10:45 Uhr"
+        + "\n Projekt-Talk: E-Commerce Lösung für Elektrogroßhandel"
+	+ "\n\n 13:15 - 13:45 Uhr"
+	+ "\n Offene Fragenrunde, Antiloop als Arbeitgeber"
+	+ "\n\n14:00 - 14:30 Uhr"
+	+ "\nDesign Patterns in PHP am Beispiel Spryker"
+	+ "\n\n14:45 - 15:15 Uhr"
+	+ "\nOffene Fragerunde, Antiloop als Arbeitgeber"
+	+ "\n\n15:30 - 15:45 Uhr"
+	+ "\nProjekt-Ablauf: Wie arbeitet Antiloop"
+	+ "\n\n15:45 - 16:00 Uh"
+	+ "\nAusklang: Der “virtuelle” Bierschrank wird geöffnet"
+				   ,[
+	    {
+		'label': "Ok",
+		'className': "primary",
+		callback: (popup) => {
+                popup.close();
+            }
+        }
+    ]);
+});
+
+WA.room.onLeaveZone('TalkSchedule', closePopUp);
+
+
 function closePopUp(){
     if (currentPopup !== undefined) {
         currentPopup.close();
