@@ -7,7 +7,7 @@ bootstrapExtra().catch(e => console.error(e));
 let currentPopup: any = undefined;
 
 let linkedIn = [
-    {'zoneName':'Tami', 'name': 'Tamara', 'url': 'https://www.linkedin.com/in/tamara-katja-frast/'},
+    {'zoneName':'Tami', 'name': 'Tamara', 'url': 'https://www.linkedin.com/in/tamara-katja-frast-7709a71ab/'},
     {'zoneName':'Gerold', 'name': 'Gerold', 'url': 'https://www.linkedin.com/in/gerold-böhler-054437170/'},
     {'zoneName':'Matthias', 'name': 'Matthias', 'url': 'https://www.linkedin.com/in/matthias-frick-96775110a/'},
     {'zoneName':'Herbert', 'name': 'Herbert', 'url': 'https://www.linkedin.com/in/herbert-scheffknecht-7a905b32/'},
