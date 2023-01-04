@@ -1,0 +1,7 @@
+Options All -Indexes
+Options +FollowSymLinks
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)(?:\?|$) index.php?resource=$1 [NC,L,QSA]
