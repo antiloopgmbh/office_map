@@ -50,6 +50,7 @@ WA.onInit().then(() => {
                 if (employeesInTheHouse == null)
                     return;
                 
+                // @ts-ignore
                 WA.ui.modal.openModal({
                     title: 'Who is in the House',
                     src: 'data:text/html;charset=utf-8,' + encodeURIComponent(inTheHouseIframe(employeesInTheHouse)),
@@ -73,6 +74,7 @@ WA.onInit().then(() => {
             isInTheHouseZone = true;
         });
         WA.room.onLeaveLayer('inTheHouseZone').subscribe(() => {
+            // @ts-ignore
             WA.ui.modal.closeModal();
             isInTheHouseZone = false;
         });
@@ -86,6 +88,7 @@ WA.onInit().then(() => {
                 if (employees == null)
                     return;
                 
+                // @ts-ignore
                 WA.ui.modal.openModal({
                     title: 'We are',
                     src: 'data:text/html;charset=utf-8,' + encodeURIComponent(weAreIframe(employees)),
@@ -109,6 +112,7 @@ WA.onInit().then(() => {
             isInWeAre = true;
         });
         WA.room.onLeaveLayer('weAreZone').subscribe(() => {
+            // @ts-ignore
             WA.ui.modal.closeModal();
             isInWeAre = false;
         });
@@ -345,7 +349,7 @@ WA.onInit().then(() => {
                 if (usedQuestions.length == questionsAnswers.length)
                     return null;
 
-                let lookup = questionsAnswers.filter((value, index) => !usedQuestions.includes(index)),
+                let lookup = questionsAnswers.filter((_value, index) => !usedQuestions.includes(index)),
                     question = lookup[Math.floor(Math.random()*lookup.length)];
 
                 usedQuestions.push(questionsAnswers.indexOf(question));
@@ -406,7 +410,7 @@ WA.onInit().then(() => {
                 if (usedQuestions.length == questions.length)
                     return null;
 
-                let lookup = questions.filter((value, index) => !usedQuestions.includes(index)),
+                let lookup = questions.filter((_value, index) => !usedQuestions.includes(index)),
                     question = lookup[Math.floor(Math.random()*lookup.length)];
 
                 usedQuestions.push(questions.indexOf(question));
