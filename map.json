@@ -612,7 +612,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"https:\/\/play.workadventu.re\/_\/th9q5kmbofo\/localhost:3000\/maze.json"
+                 "value":"https:\/\/play.workadventu.re\/@\/antiloop\/welcome\/maze"
                 }],
          "type":"tilelayer",
          "visible":true,

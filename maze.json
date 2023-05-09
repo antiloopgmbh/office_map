@@ -82,7 +82,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"https:\/\/play.workadventu.re\/_\/th9q5kmbofo\/localhost:3000\/map.json#entryFromServer"
+                 "value":"https:\/\/play.workadventu.re\/@\/antiloop\/welcome\/office#entryFromServer"
                 }],
          "type":"tilelayer",
          "visible":true,
