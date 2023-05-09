@@ -40,22 +40,24 @@ WA.onInit().then(() => {
     
             WA.room.onLeaveLayer(`${popup.name}Zone`).subscribe(closePopup);
         });
-
-        currentPopup = WA.ui.openPopup('enterZonePopup',  `Welcome to Antiloop!
-
-        In our interactive office you will get a first impression of us - as you can see, we love our job : -)
         
-        Good to know:
-        - Preferred Browser: Chrome
-        - Control with WASD or arrow keys
-        - To conduct a video chat, walk with your character to one of our colleagues. As soon as a circle appears, you can start.
-
-        Have fun!`, [{
-            label: 'GO',
-            callback(popup: Popup) {
-                popup.close();
-            }
-        }]);
+        if (!window.location.hash) {
+            currentPopup = WA.ui.openPopup('enterZonePopup',  `Welcome to Antiloop!
+    
+            In our interactive office you will get a first impression of us - as you can see, we love our job : -)
+            
+            Good to know:
+            - Preferred Browser: Chrome
+            - Control with WASD or arrow keys
+            - To conduct a video chat, walk with your character to one of our colleagues. As soon as a circle appears, you can start.
+    
+            Have fun!`, [{
+                label: 'GO',
+                callback(popup: Popup) {
+                    popup.close();
+                }
+            }]);
+        }
     })();
 
     // Who is in the house
