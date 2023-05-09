@@ -1077,6 +1077,17 @@
                  "y":286.996666666667
                 }, 
                 {
+                 "class":"",
+                 "height":346.667,
+                 "id":39,
+                 "name":"enterZonePopup",
+                 "rotation":0,
+                 "visible":true,
+                 "width":565.333,
+                 "x":869.3335,
+                 "y":174.6665
+                }, 
+                {
                  "class":"area",
                  "height":221.5,
                  "id":25,
@@ -1296,7 +1307,7 @@
          "y":0
         }],
  "nextlayerid":92,
- "nextobjectid":39,
+ "nextobjectid":40,
  "orientation":"orthogonal",
  "properties":[
         {
