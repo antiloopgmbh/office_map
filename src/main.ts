@@ -20,7 +20,7 @@ WA.onInit().then(() => {
             text: 'Spryker Solution Partner'
         }, {
             name: 'pimcorePartner',
-            text: 'Pimcore Gold Partner'
+            text: 'Pimcore Platinum Partner'
         }, {
             name: 'clock',
             text() {
