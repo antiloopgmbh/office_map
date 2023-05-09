@@ -20,7 +20,7 @@ WA.onInit().then(() => {
             text: 'Spryker Solution Partner'
         }, {
             name: 'pimcorePartner',
-            text: 'Pimcore Gold Partner'
+            text: 'Pimcore Platinum Partner'
         }, {
             name: 'clock',
             text() {
@@ -44,7 +44,7 @@ WA.onInit().then(() => {
         currentPopup = WA.ui.openPopup('enterZonePopup',  `Welcome to Antiloop!
 
         In our interactive office you will get a first impression of us - as you can see, we love our job : -)
-        
+
         Good to know:
         - Preferred Browser: Chrome
         - Control with WASD or arrow keys
